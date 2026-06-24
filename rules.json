@@ -1,0 +1,55 @@
+{
+  "_comment": "Ordered payee->category rules. Matched case-insensitively as a substring against 'payee + transaction type'. First match wins. 'category' must EXACTLY match a YNAB category name in the budget. TNG tolls come through as 'RFID Payment'/'PayDirect Payment' types, so we match those types directly. Merchant QR payments come through as type 'Payment' and are matched by name. Unmatched transactions (and all reloads/received inflows) are left uncategorized.",
+  "rules": [
+    { "match": "rfid payment",     "category": "⛽ Petrol, Toll & Parking" },
+    { "match": "paydirect",        "category": "⛽ Petrol, Toll & Parking" },
+    { "match": "card reload",      "category": "⛽ Petrol, Toll & Parking" },
+    { "match": "parking",          "category": "⛽ Petrol, Toll & Parking" },
+    { "match": "smarttag",         "category": "⛽ Petrol, Toll & Parking" },
+    { "match": "touch",            "category": "⛽ Petrol, Toll & Parking" },
+
+    { "match": "petronas",         "category": "⛽ Petrol, Toll & Parking" },
+    { "match": "shell",            "category": "⛽ Petrol, Toll & Parking" },
+    { "match": "caltex",           "category": "⛽ Petrol, Toll & Parking" },
+    { "match": "petron",           "category": "⛽ Petrol, Toll & Parking" },
+    { "match": "bhpetrol",         "category": "⛽ Petrol, Toll & Parking" },
+    { "match": "setel",            "category": "⛽ Petrol, Toll & Parking" },
+
+    { "match": "chagee",           "category": "🍜 Dining Out" },
+    { "match": "grabfood",         "category": "🍜 Dining Out" },
+    { "match": "foodpanda",        "category": "🍜 Dining Out" },
+    { "match": "mcdonald",         "category": "🍜 Dining Out" },
+    { "match": "kfc",              "category": "🍜 Dining Out" },
+    { "match": "restoran",         "category": "🍜 Dining Out" },
+    { "match": "restaurant",       "category": "🍜 Dining Out" },
+    { "match": "cafe",             "category": "🍜 Dining Out" },
+    { "match": "kopitiam",         "category": "🍜 Dining Out" },
+    { "match": "starbucks",        "category": "🍜 Dining Out" },
+    { "match": "zus",              "category": "🍜 Dining Out" },
+
+    { "match": "7-eleven",         "category": "🛒 Groceries" },
+    { "match": "speedmart",        "category": "🛒 Groceries" },
+    { "match": "99 ",              "category": "🛒 Groceries" },
+    { "match": "lotus",            "category": "🛒 Groceries" },
+    { "match": "tesco",            "category": "🛒 Groceries" },
+    { "match": "aeon",             "category": "🛒 Groceries" },
+    { "match": "mydin",            "category": "🛒 Groceries" },
+    { "match": "giant",            "category": "🛒 Groceries" },
+    { "match": "grocer",           "category": "🛒 Groceries" },
+
+    { "match": "air selangor",     "category": "⚡ Utilities" },
+    { "match": "syabas",           "category": "⚡ Utilities" },
+    { "match": "tnb",              "category": "⚡ Utilities" },
+
+    { "match": "paynwash",         "category": "Car Maintenance" },
+    { "match": "car wash",         "category": "Car Maintenance" },
+    { "match": "carwash",          "category": "Car Maintenance" },
+
+    { "match": "ctos",             "category": "Other Subs" },
+
+    { "match": "guardian",         "category": "Household & Personal" },
+    { "match": "watsons",          "category": "Household & Personal" },
+    { "match": "pharmacy",         "category": "Household & Personal" },
+    { "match": "farmasi",          "category": "Household & Personal" }
+  ]
+}
